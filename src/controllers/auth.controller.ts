@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import spotify from "../config/spotify";
 
-export const login = (_: Request, res: Response) => {
+export const auth = (_: Request, res: Response) => {
   const scopes = [
     "playlist-modify-public",
     "playlist-modify-private",

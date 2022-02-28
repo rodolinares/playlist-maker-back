@@ -4,7 +4,7 @@ import express from "express";
 import cors from "cors";
 
 // Controllers (route handlers)
-import * as loginController from "./controllers/login.controller";
+import * as authController from "./controllers/auth.controller";
 
 // Create Express server
 const app = express();
@@ -19,7 +19,7 @@ app.use(cors());
 /**
  * Primary app routes.
  */
-app.get("/login", loginController.login);
-app.get("/callback", loginController.callback);
+app.get("/auth", authController.auth);
+app.get("/callback", authController.callback);
 
 export default app;
